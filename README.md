@@ -1,4 +1,4 @@
 # LoveMeter
-Who you wanna fuck? Are you gonna fuck the one you wanna fuck? Let's find out!
-
-btw detta är två år gammalt
+## Do you have a crush? Do you want to know if she loves you? Well, I can't tell you that. But LoveMeter™ can!
+<br/>
+Using our high-tech techonolgy you can find out the mathematical probability of it happening, in ten diffrent universes!
