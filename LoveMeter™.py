@@ -1,69 +1,38 @@
-import string
 from random import randint
 from time import sleep
 import os
-clear = lambda: os.system("cls")
-sleep(randint(5, 10) // 2)
+from getpass import getpass
+
 print("LoveMeter™ is booting up . . .")
-sleep(randint(5, 10) // 2)
+sleep(randint(2, 5) / 2)
 
-print("DEFAULT LANG: SWE")
-sleep(randint(1, 10) // 5)
-clear()
+print("DEFAULT LANG.: SWE")
+sleep(randint(1, 10) / 5)
+
+os.system("cls")
+
 namn = input("Ditt namn: ")
-sleep(randint(2, 3) // 2)
+sleep(1)
+
 crush = input("Ditt crush namn: ")
-sleep(randint(2, 4))
-lst = [word[0].upper() + word[1:] for word in namn.split()]
-namn = " ".join(lst)
+sleep(1)
 
-lst = [word[0].upper() + word[1:] for word in crush.split()]
-crush = " ".join(lst)
+os.system("cls")
 
-if namn == "Zach" and crush == "Ellie":
-    print("\nDetta är resultaren från 10 universum. Vi är nummer", str(randint(1, 10)) + ".")
-    sleep(0.5)
-    print(" Universum 1: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 2: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 3: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 4: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 5: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 6: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 7: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 8: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 9: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 10: Det är", str(randint(-1000, 10)) + "% chans att", namn, "blir ihop med", crush + ".")
+print(f"Detta är resultaren från 10 olika universum. Vi är nummer {randint(1, 10)}.")
+if namn.lower() == "zach" and crush.lower() == "ellie":
+    minPercent = -100
+    maxPercent = 10
+
 else:
-    print("Detta är resultaren från 10 olika universum. Vi är nummer", str(randint(1, 10)) + ".")
-    sleep(0.5)
-    print(" Universum 1: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 2: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 3: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 4: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 5: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 6: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 7: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 8: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 9: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
-    sleep(0.5)
-    print(" Universum 10: Det är", str(randint(0, 100)) + "% chans att", namn, "blir ihop med", crush + ".")
+    minPercent = 0
+    maxPercent = 100
+
+for i in range(10):
+    print(
+        f"Universum {i + 1}: Det är {randint(minPercent,maxPercent)}% chans att {namn} blir ihop.\n"
+    )
+    sleep(1)
 
 sleep(3)
-input("\nTryck på enter för att avsluta :)")
+getpass("\nTryck på enter för att avsluta :)")
